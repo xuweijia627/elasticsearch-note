@@ -1,4 +1,5 @@
-###创建索引
+## 创建索引
+```
 PUT student
 {
   "settings": {
@@ -24,9 +25,10 @@ PUT student
       },
       "name": {
         "type": "text",
-        "analyzer": "ik_max_word",
+        "analyzer": "ik_max_word",       // 中文分词
         "search_analyzer": "ik_smart"
       }
     }
   }
 }
+```
