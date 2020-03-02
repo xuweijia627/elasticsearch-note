@@ -1,5 +1,5 @@
 ## 创建索引
-```
+```js
 PUT student
 {
   "settings": {
