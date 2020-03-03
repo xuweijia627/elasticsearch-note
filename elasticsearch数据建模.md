@@ -32,3 +32,11 @@ PUT student
   }
 }
 ```
+## 存入数据
+```js
+POST student/_doc
+{
+  "name": "张三",
+  "age": 33
+}
+```
