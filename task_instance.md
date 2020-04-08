@@ -17,10 +17,12 @@ PUT task_instance
         "type": "keyword"
       },
       "planned_task_start_date": {
-        "type": "date"
+        "type": "date",
+        "format": "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
       },
       "planned_task_end_date": {
-        "type": "date"
+        "type": "date",
+        "format": "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
       },
       "business_type_id": {
         "type": "keyword"
@@ -35,10 +37,12 @@ PUT task_instance
         "type": "keyword"
       },
       "actual_task_started_date": {
-        "type": "date"
+        "type": "date",
+        "format": "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
       },
       "actual_task_completed_date": {
-        "type": "date"
+        "type": "date",
+        "format": "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
       },
       "task_status": {
         "type": "integer"
@@ -50,13 +54,14 @@ PUT task_instance
         "type": "keyword"
       },
       "date_last_updated": {
-        "type": "date"
+        "type": "date",
+        "format": "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
       },
       "last_updated_by_user_name": {
         "type": "keyword"
       },
       "is_deleted": {
-        "type": "integer"
+        "type": "boolean"
       },
       "serial_no": {
         "type": "keyword"
@@ -82,6 +87,7 @@ PUT task_instance
     }
   }
 }
+
 PUT task_instance/_doc/273386176135168002
 {
   "id": "273386176135168002",
