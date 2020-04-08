@@ -1,3 +1,4 @@
+```js
 PUT task_instance
 {
   "settings": {
@@ -86,3 +87,5 @@ PUT task_instance/_doc/273386176135168002
   "id": "273386176135168002",
   "book_id": "33"
 }
+
+```
