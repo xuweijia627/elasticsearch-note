@@ -89,3 +89,10 @@ PUT task_instance/_doc/273386176135168002
 }
 
 ```
+### 清除索引下所有数据
+```js
+POST task_instance/_doc/_delete_by_query
+{
+  "query": { "match_all": {} }
+}
+```
