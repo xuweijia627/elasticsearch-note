@@ -114,3 +114,14 @@ POST task_instance/_doc/_delete_by_query
   "query": { "match_all": {} }
 }
 ```
+### 解决索引变为只读状态
+```js
+PUT _settings
+{
+  "index": {
+    "blocks": {
+      "read_only_allow_delete": "false"
+    }
+  }
+}
+```
