@@ -106,6 +106,28 @@ POST task_instance/_search?size=0
   }
 }
 
+GET task_instance/_search
+{
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "exists": {
+            "field": "business_type_name"
+          }
+        }
+      ], 
+      "filter": [
+          {
+          "multi_match":{
+                        "type":"best_fields",
+                        "query":"银行流水"
+                    }
+        }  
+      ]
+    }
+  }
+}
 ```
 ### 清除索引下所有数据
 ```js
