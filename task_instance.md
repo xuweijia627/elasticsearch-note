@@ -128,6 +128,14 @@ GET task_instance/_search
     }
   }
 }
+
+POST task_instance/_doc/_bulk
+{"index":{"_id":"qqq"}}
+{"id": "123456","gl_month":"123"}
+{"index":{"_id":"www"}}
+{"id": "123456","gl_month":"好"}
+{"index":{"_id":"eee"}}
+{"id": "123456","gl_month":"1234"}
 ```
 ### 清除索引下所有数据
 ```js
@@ -147,3 +155,4 @@ PUT _settings
   }
 }
 ```
+
