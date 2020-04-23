@@ -34,9 +34,12 @@ PUT student
 ```
 ## 存入数据
 ```js
-POST student/_doc
+POST student/_doc/6
 {
-  "name": "张三",
-  "age": 33
+  "name": "大乔",
+  "age": 22,
+  "birthday":"2009-12-10T10:10:10",
+  "gender":"女",
+  "class_id":"111"
 }
 ```
