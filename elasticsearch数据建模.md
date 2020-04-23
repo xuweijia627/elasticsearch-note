@@ -1,4 +1,4 @@
-## 创建索引
+### 创建索引
 ```js
 PUT student
 {
@@ -32,7 +32,7 @@ PUT student
   }
 }
 ```
-## 存入数据
+### 存入数据
 ```js
 POST student/_doc/6
 {
@@ -41,5 +41,19 @@ POST student/_doc/6
   "birthday":"2009-12-10T10:10:10",
   "gender":"女",
   "class_id":"111"
+}
+```
+### 查最大年龄
+```
+POST student/_search
+{
+  "size": 0,
+  "aggs": {
+    "最大年龄": {
+      "max": {
+        "field": "age"
+      }
+    }
+  }
 }
 ```
