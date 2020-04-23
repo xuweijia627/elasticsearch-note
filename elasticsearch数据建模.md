@@ -95,3 +95,24 @@ POST student/_search
   }
 }
 ```
+### 不同班级中，男女分别有多少
+```
+POST student/_search
+{
+  "size": 0,
+  "aggs": {
+    "班级": {
+      "terms": {
+        "field": "class_id"
+      },
+      "aggs": {
+        "性别": {
+          "terms": {
+            "field": "gender"
+          }
+        }
+      }
+    }
+  }
+}
+```
