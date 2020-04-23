@@ -1,5 +1,5 @@
 ### 创建索引
-```js
+```
 PUT student
 {
   "settings": {
@@ -33,7 +33,7 @@ PUT student
 }
 ```
 ### 存入数据
-```js
+```
 POST student/_doc/6
 {
   "name": "大乔",
@@ -52,6 +52,20 @@ POST student/_search
     "最大年龄": {
       "max": {
         "field": "age"
+      }
+    }
+  }
+}
+```
+### 按性别分桶
+```
+POST student/_search
+{
+  "size": 0,
+  "aggs": {
+    "gender": {
+      "terms": {
+        "field": "gender"
       }
     }
   }
