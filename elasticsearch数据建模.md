@@ -71,3 +71,27 @@ POST student/_search
   }
 }
 ```
+### 查年龄大于30的学生，并按性别分桶
+```
+POST student/_search
+{
+  "query": {
+    "bool": {
+      "filter": {
+        "range": {
+          "age": {
+            "gte": 30
+          }
+        }
+      }
+    }
+  },
+  "aggs": {
+    "gender": {
+      "terms": {
+        "field": "gender"
+      }
+    }
+  }
+}
+```
