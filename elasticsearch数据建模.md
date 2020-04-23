@@ -116,3 +116,47 @@ POST student/_search
   }
 }
 ```
+### 数据迁移
+```
+POST _reindex
+{
+  "source": {
+    "index": "student"
+  },
+  "dest": {
+    "index": "student1"
+  }
+}
+GET student1/_search
+{
+  "query": {
+    "bool": {
+      "filter": {
+        "term": {
+          "interest": "yy"
+        }
+      }
+    }
+  }
+}
+POST student1/_search
+{
+  "size": 0, 
+  "query": {
+    "bool": {
+      "filter": {
+        "term": {
+          "interest": "yy"
+        }
+      }
+    }
+  }, 
+  "aggs": {
+    "gender": {
+      "terms": {
+        "field": "gender"
+      }
+    }
+  }
+}
+```
