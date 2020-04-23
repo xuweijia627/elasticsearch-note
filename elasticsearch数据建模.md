@@ -116,6 +116,7 @@ POST student/_search
   }
 }
 ```
+
 ### 数据迁移
 ```
 POST _reindex
