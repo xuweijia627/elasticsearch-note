@@ -13,6 +13,12 @@ PUT task_instance
       "book_id": {
         "type": "keyword"
       },
+      "book_name": {
+        "type": "keyword"
+      },
+      "company": {
+        "type": "keyword"
+      },
       "task_name": {
         "type": "keyword"
       },
