@@ -164,4 +164,24 @@ PUT _settings
   }
 }
 ```
-
+### 按业务类型聚合
+```
+POST task_instance/_search
+{
+  "size": 0,
+  "aggs": {
+    "type": {
+      "terms": {
+        "field": "first_level_type"
+      },
+      "aggs": {
+        "taskStatistics": {
+          "terms": {
+            "field": "task_status"
+          }
+        }
+      }
+    }
+  }
+}
+```
