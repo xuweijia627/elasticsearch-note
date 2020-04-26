@@ -19,6 +19,9 @@ PUT task_instance
       "company": {
         "type": "keyword"
       },
+      "first_level_type": {
+        "type": "keyword"
+      },
       "task_name": {
         "type": "keyword"
       },
