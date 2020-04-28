@@ -22,6 +22,9 @@ PUT task_instance
       "first_level_type": {
         "type": "keyword"
       },
+      "second_level_type": {
+        "type": "keyword"
+      },
       "task_name": {
         "type": "keyword"
       },
