@@ -151,7 +151,7 @@ POST task_instance/_doc/_bulk
 ```
 ### 清除索引下所有数据
 ```js
-POST task_instance/_doc/_delete_by_query
+POST task_instance/_delete_by_query
 {
   "query": { "match_all": {} }
 }
