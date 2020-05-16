@@ -106,13 +106,13 @@ PUT task_instance/_doc/273386176135168002
   "book_id": "33"
 }
 
-POST task_instance/_search?size=0
+POST task_instancepro/_search
 {
+  "size": 0, 
   "aggs": {
     "date_last_updated": {
       "max": {
-        "field": "date_last_updated",
-        "missing": 0
+        "field": "date_last_updated"
       }
     }
   }
