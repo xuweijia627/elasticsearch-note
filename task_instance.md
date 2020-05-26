@@ -72,6 +72,10 @@ PUT task_instance
         "type": "date",
         "format": "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
       },
+      "date_created": {
+        "type": "date",
+        "format": "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
+      },
       "last_updated_by_user_name": {
         "type": "keyword"
       },
