@@ -28,16 +28,11 @@ PUT task_casepro
       "second_level_type": {
         "type": "keyword"
       },
-      "task_name": {
+      "case_name": {
         "type": "keyword"
       },
-      "planned_task_start_date": {
-        "type": "date",
-        "format": "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
-      },
-      "planned_task_end_date": {
-        "type": "date",
-        "format": "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
+      "task_instance_id": {
+        "type": "keyword"
       },
       "business_type_id": {
         "type": "keyword"
@@ -51,38 +46,44 @@ PUT task_casepro
       "tenant_id": {
         "type": "keyword"
       },
-      "actual_task_started_date": {
-        "type": "date",
-        "format": "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
-      },
-      "actual_task_completed_date": {
-        "type": "date",
-        "format": "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
-      },
-      "task_status": {
+      "status": {
         "type": "integer"
       },
-      "closing_cycle_type_name": {
-        "type": "keyword"
+      "nc_total": {
+        "type": "integer"
       },
-      "closing_cycle_type_id": {
-        "type": "keyword"
+      "nc_completed": {
+        "type": "integer"
       },
-      "date_last_updated": {
-        "type": "date",
-        "format": "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
+      "miss_total": {
+        "type": "integer"
+      },
+      "miss_completed": {
+        "type": "integer"
       },
       "date_created": {
         "type": "date",
         "format": "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
       },
-      "last_updated_by_user_name": {
+      "assignee_name": {
         "type": "keyword"
       },
-      "is_deleted": {
-        "type": "boolean"
+      "workflow_process_id": {
+        "type": "keyword"
       },
-      "serial_no": {
+      "workflow_process_name": {
+        "type": "keyword"
+      },
+      "workflow_node_id": {
+        "type": "keyword"
+      },
+      "workflow_node_name": {
+        "type": "keyword"
+      },
+      "workflow_instance_id": {
+        "type": "keyword"
+      },
+      "workflow_task_id": {
         "type": "keyword"
       },
       "nc_total": {
@@ -97,11 +98,11 @@ PUT task_casepro
       "miss_completed": {
         "type": "integer"
       },
-      "comment": {
+      "business_data_id": {
         "type": "keyword"
       },
-      "task_start_mode": {
-        "type": "integer"
+      "workflow_task_info_id": {
+        "type": "keyword"
       }
     }
   }
