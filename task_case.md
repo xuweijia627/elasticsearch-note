@@ -86,18 +86,6 @@ PUT task_casepro
       "workflow_task_id": {
         "type": "keyword"
       },
-      "nc_total": {
-        "type": "integer"
-      },
-      "miss_total": {
-        "type": "integer"
-      },
-      "nc_completed": {
-        "type": "integer"
-      },
-      "miss_completed": {
-        "type": "integer"
-      },
       "business_data_id": {
         "type": "keyword"
       },
