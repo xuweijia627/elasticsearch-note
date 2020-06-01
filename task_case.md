@@ -61,6 +61,9 @@ PUT task_casepro
       "miss_completed": {
         "type": "integer"
       },
+      "delay_days": {
+        "type": "integer"
+      },
       "date_created": {
         "type": "date",
         "format": "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
