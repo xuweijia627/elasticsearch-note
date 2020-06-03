@@ -49,6 +49,9 @@ PUT task_casepro
       "status": {
         "type": "integer"
       },
+      "spt": {
+        "type": "integer"
+      },
       "nc_total": {
         "type": "integer"
       },
