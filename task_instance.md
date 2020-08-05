@@ -124,6 +124,25 @@ POST task_instancepro/_search
     }
   }
 }
+POST task_instancepro/_search
+{
+  "size": 2, 
+  "query": {
+    "range": {
+      "date_last_updated": {
+        "gte": "2020-08-05 01:22:20",
+        "lte": "2020-08-05 18:08:40"
+      }
+    }
+  },
+  "sort": [
+    {
+      "date_last_updated": {
+        "order": "desc"
+      }
+    }
+  ]
+}
 
 GET task_instance/_search
 {
