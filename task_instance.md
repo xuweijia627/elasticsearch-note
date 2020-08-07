@@ -181,6 +181,15 @@ POST task_instance/_delete_by_query
 {
   "query": { "match_all": {} }
 }
+
+POST task_case/_delete_by_query
+{
+  "query": {
+    "term":{
+      "gl_month": 202008 
+    }
+  }
+}
 ```
 ### 解决索引变为只读状态
 ```js
