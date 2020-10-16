@@ -7,7 +7,15 @@ PUT task_casepro
   },
   "mappings": {
     "properties": {
-      "id": {
+      "actual_end_date": {
+        "type": "date",
+        "format": "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
+      },
+      "actual_start_date": {
+        "type": "date",
+        "format": "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
+      },
+      "assignee_name": {
         "type": "keyword"
       },
       "book_id": {
@@ -16,22 +24,7 @@ PUT task_casepro
       "book_name": {
         "type": "keyword"
       },
-      "company": {
-        "type": "keyword"
-      },
-      "yetai": {
-        "type": "keyword"
-      },
-      "first_level_type": {
-        "type": "keyword"
-      },
-      "second_level_type": {
-        "type": "keyword"
-      },
-      "case_name": {
-        "type": "keyword"
-      },
-      "task_instance_id": {
+      "business_data_id": {
         "type": "keyword"
       },
       "business_type_id": {
@@ -40,42 +33,56 @@ PUT task_casepro
       "business_type_name": {
         "type": "keyword"
       },
-      "gl_month": {
-        "type": "integer"
-      },
-      "tenant_id": {
+      "case_name": {
         "type": "keyword"
       },
-      "status": {
-        "type": "integer"
-      },
-      "spt": {
-        "type": "integer"
-      },
-      "nc_total": {
-        "type": "integer"
-      },
-      "nc_completed": {
-        "type": "integer"
-      },
-      "miss_total": {
-        "type": "integer"
-      },
-      "miss_completed": {
-        "type": "integer"
-      },
-      "delay_days": {
-        "type": "integer"
+      "company": {
+        "type": "keyword"
       },
       "date_created": {
         "type": "date",
         "format": "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
       },
-      "actual_start_date": {
-        "type": "date",
-        "format": "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
+      "date_last_updated": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
       },
-      "actual_end_date": {
+      "day_diff": {
+        "type": "long"
+      },
+      "delay_days": {
+        "type": "integer"
+      },
+      "first_level_type": {
+        "type": "keyword"
+      },
+      "gl_month": {
+        "type": "integer"
+      },
+      "id": {
+        "type": "keyword"
+      },
+      "minute_diff": {
+        "type": "long"
+      },
+      "miss_completed": {
+        "type": "integer"
+      },
+      "miss_total": {
+        "type": "integer"
+      },
+      "nc_completed": {
+        "type": "integer"
+      },
+      "nc_total": {
+        "type": "integer"
+      },
+      "planned_task_end_date": {
         "type": "date",
         "format": "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
       },
@@ -83,17 +90,25 @@ PUT task_casepro
         "type": "date",
         "format": "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
       },
-      "planned_task_end_date": {
-        "type": "date",
-        "format": "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
+      "second_diff": {
+        "type": "long"
       },
-      "assignee_name": {
+      "second_level_type": {
         "type": "keyword"
       },
-      "workflow_process_id": {
+      "spt": {
+        "type": "integer"
+      },
+      "status": {
+        "type": "integer"
+      },
+      "task_instance_id": {
         "type": "keyword"
       },
-      "workflow_process_name": {
+      "tenant_id": {
+        "type": "keyword"
+      },
+      "workflow_instance_id": {
         "type": "keyword"
       },
       "workflow_node_id": {
@@ -102,16 +117,19 @@ PUT task_casepro
       "workflow_node_name": {
         "type": "keyword"
       },
-      "workflow_instance_id": {
+      "workflow_process_id": {
+        "type": "keyword"
+      },
+      "workflow_process_name": {
         "type": "keyword"
       },
       "workflow_task_id": {
         "type": "keyword"
       },
-      "business_data_id": {
+      "workflow_task_info_id": {
         "type": "keyword"
       },
-      "workflow_task_info_id": {
+      "yetai": {
         "type": "keyword"
       }
     }
